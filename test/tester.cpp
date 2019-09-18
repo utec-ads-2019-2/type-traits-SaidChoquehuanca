@@ -22,7 +22,7 @@ void Tester::execute() {
         }
 
         int newSize = size - 5;
-        ASSERT(integers.size() == newSize, "The size function has problems");
+        ASSERT(integers.size() == newSize, "The size function has problems"+ to_string(integers.size()) + " " + to_string(newSize));
         ASSERT(floats.size() == newSize, "The size function has problems");
         ASSERT(isSorted(integers), "The integers list has problems");
         ASSERT(isSorted(floats), "The floats list has problems");
