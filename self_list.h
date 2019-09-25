@@ -68,6 +68,7 @@ class SelfList {
                     if((*iterador) != head){
                         Node<T> **actual = &head;
                         Node<T> *previo = (*iterador);
+                        // Así no se compara
                         if(method = Move){
                             previo->Rp++;
                             while ((previo->Rp)<((*actual)->Rp)){
@@ -91,6 +92,7 @@ class SelfList {
                             }
                             return true;
                             }
+                            // Aquí estás realizando una igualdad
                             else if(method = Transpose){
                                 (*iterador) = (*iterador)->next;
                                 previo->next = head;
